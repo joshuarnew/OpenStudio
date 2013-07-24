@@ -345,6 +345,9 @@ ENDIF()
 
 IF( BUILD_PYTHON_BINDINGS )
   # need python
+  # find_package(PythonInterp REQUIRED)
+  # message(${PYTHON_VERSION_STRING})
+  # find_package(PythonLibs ${PYTHON_VERSION_STRING} EXACT)
   Find_Package( PythonLibs 2.7 REQUIRED )
   INCLUDE_DIRECTORIES( SYSTEM ${PYTHON_INCLUDE_DIRS} )
   SET( ALL_PYTHON_BINDING_TARGETS "" ) # global list
